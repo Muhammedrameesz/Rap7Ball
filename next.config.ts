@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
+// next.config.ts or next.config.js
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig = {
+  images: {
+    domains: ['img.freepik.com'],
+  },
 };
 
 export default nextConfig;
