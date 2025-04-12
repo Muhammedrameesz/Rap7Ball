@@ -28,7 +28,7 @@ const containerVariants = {
   },
 };
 const handleButtonClick = () => {
-  const scrollAmount = document.body.scrollHeight * 0.3;
+  const scrollAmount = document.body.scrollHeight * 0.2;
   window.scrollTo({
     top: scrollAmount,
     behavior: "smooth",
