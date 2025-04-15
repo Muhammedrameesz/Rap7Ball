@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
-import { Plus_Jakarta_Sans,Outfit } from "next/font/google";
+import { Outfit } from "next/font/google";
 import Footer from "@/components/footer/Footer";
 
 
@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 };
 
 
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-plus-jakarta",
-  display: "swap",
-});
+// const jakarta = Plus_Jakarta_Sans({
+//   subsets: ["latin"],
+//   weight: ["400", "500", "700"],
+//   variable: "--font-plus-jakarta",
+//   display: "swap",
+// });
 const Cinzelf =Outfit({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
