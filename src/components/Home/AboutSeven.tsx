@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { MdCheckCircle } from "react-icons/md"; // More semantic than plain check
 import type { ReactNode } from "react";
+import { FaArrowDown, FaRedoAlt, FaRegHandshake, FaShieldAlt } from "react-icons/fa";
 
 interface ContentType {
   title: string;
@@ -15,22 +16,22 @@ const contents: ContentType[] = [
   {
     title:
       "Before starting the over, the pitcher should inform the umpire and batsman about their pitching style. Once started, they must maintain that style for the entire over.",
-    icon: <MdCheckCircle size={20} />,
+    icon: <FaRegHandshake size={20} />,
   },
   {
     title:
       "To protect the batsman from a direct hit, a bounce zone is included—7m long from the home base pylon and 3m wide.",
-    icon: <MdCheckCircle size={20} />,
+    icon: <FaShieldAlt size={20} />,
   },
   {
     title:
       "The ball must bounce in the bounce zone while the pitcher delivers to the pylon.",
-    icon: <MdCheckCircle size={20} />,
+    icon: <FaArrowDown size={20} />,
   },
   {
     title:
       "One pitcher is allowed three alternate overs in an inning.",
-    icon: <MdCheckCircle size={20} />,
+    icon: <FaRedoAlt size={20} />,
   },
 ];
 
