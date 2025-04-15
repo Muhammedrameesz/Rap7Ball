@@ -1,6 +1,7 @@
 'use client'
 
 import ImageTwo from "@/images/RaP7 Step by Step Procedure_page-0001.jpg";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { MdCheck } from "react-icons/md";
@@ -46,19 +47,15 @@ export default function AboutTen() {
           transition={{ duration: 0.8 }}
           className="space-y-8"
         >
-          <h1 className="text-4xl md:text-5xl font-semibold text-gray-900">
-            Header
-          </h1>
          
-
-         
-          <div className="space-y-4">
+        
+          <div className="space-y-4 md:space-y-8">
             {contents?.map((item, i) => (
               <div key={i} className="flex items-start space-x-4">
                 <div className="text-white text-lg bg-purple-800 rounded-full p-1">
                   {item.icon}
                 </div>
-                <h2 className="text-lg font-medium text-gray-800">{item.title}</h2>
+                <h2 className="text-xl font-medium text-gray-800">{item.title}</h2>
               </div>
             ))}
           </div>

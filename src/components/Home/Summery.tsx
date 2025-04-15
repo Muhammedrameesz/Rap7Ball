@@ -61,13 +61,13 @@ export default function CardSection() {
           transition={{ duration: 0.8 }}
           className="flex flex-col justify-center items-center text-center gap-5 col-span-1 md:col-span-2 bg-gradient-to-br from-gray-950 via-customBlue to-black py-16 text-white rounded-3xl"
         >
-          <h1 className="text-transparent uppercase bg-clip-text bg-gradient-to-tr text-lg font-semibold from-red-500 to-white border border-gray-500 rounded-full px-4 py-1">
-          Summary
+          <h1 className=" shadow-sm shadow-red-500 text-lg font-semibold text-red-500  rounded-full px-4 py-1">
+          Rap <span className="text-white text-xl">7</span> Ball
           </h1>
-          <h1 className="text-4xl font-semibold">
-           Lorem ipsum dolor sit, amet consectetur 
+          <h1 className="text-4xl text-gray-300 font-bold">
+          Where Cricket Meets Baseball — 
           </h1>
-          <h1 className="text-4xl font-bold">CoreX Business Suite</h1>
+          <h1 className="text-4xl text-gray-300 font-bold">Rap7 style! Game on!</h1>
         </motion.section>
 
         <motion.section

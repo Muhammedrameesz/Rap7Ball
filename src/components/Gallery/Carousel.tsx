@@ -24,26 +24,21 @@ const images = [imae3, imae4, imae5, imae6, imae2, imae1];
 export function CarouselDemo() {
   return (
     <section
-      className="relative w-full text-white py-16 md:py-28 px-4 md:px-8"
+      className="relative w-full text-white py-16 md:py-28 px-4 md:px-8 bg-no-repeat bg-center bg-cover"
       style={{
         backgroundImage: `url(https://img.freepik.com/premium-photo/3d-render-cricket-stadium-with-playground-bat-ball-stamps-with-helmet_752894-87.jpg?w=740)`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        // backgroundSize: "cover",
+        // backgroundPosition: "center",
       }}
     >
  
       <div className="absolute inset-0 bg-black/80 z-0" />
     
       <div className="relative z-10 max-w-4xl mx-auto text-center mb-10 px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-orange-500">
-          RaP <span className="text-4xl text-white md:text-5xl">7</span> Ball
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-red-700">
+          RaP <span className="text-4xl text-customBlue md:text-5xl">7</span> Ball
         </h2>
-        <p className="text-gray-100 max-w-2xl mx-auto text-base md:text-lg">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
-          numquam incidunt obcaecati sapiente cum ut nisi illo est quis, quia
-          magni, perferendis delectus ad excepturi exercitationem dolores quo
-          nulla temporibus.
-        </p>
+        
       </div>
 
     

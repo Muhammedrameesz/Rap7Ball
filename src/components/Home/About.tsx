@@ -52,23 +52,15 @@ export default function AboutTwo() {
           transition={{ duration: 0.8 }}
           className="space-y-8"
         >
-          <h1 className="text-4xl md:text-5xl font-semibold text-gray-900">
-           Header
-          </h1>
-          <p className="text-gray-600 text-lg">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, id
-            magni. Dolorem dignissimos quisquam, eum voluptatum aspernatur
-            incidunt sint hic non, in asperiores error distinctio vitae aliquam
-            similique vero cumque?
-          </p>
+         
 
-          <div className="space-y-4">
+          <div className="space-y-4 md:space-y-8">
             {contents?.map((item, i) => (
               <div key={i} className="flex items-start space-x-4">
                 <div className="text-white text-lg bg-purple-800 rounded-full p-1">
                   {item.icon}
                 </div>
-                <h2 className="text-lg font-medium text-gray-800">
+                <h2 className="text-xl font-medium text-gray-800">
                   {item.title}
                 </h2>
               </div>

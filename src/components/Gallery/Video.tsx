@@ -8,7 +8,8 @@ const VideoSection = () => {
       // backgroundImage:`url(https://img.freepik.com/premium-vector/white-background-with-squares-squares-it_1274009-225.jpg?w=740)`
     }}>
      
-       <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 bg-white shadow-custom w-fit mx-auto px-6 py-2 rounded-full text-gray-950 mb-6 md:mb-10 text-center">
+       <h2 className="text-3xl  font-semibold text-gray-800 bg-black/50 shadow-custom w-fit mx-auto px-6 py-2 
+                      rounded-full text-white mb-6 md:mb-10 text-center">
           This video explains what RaP7 Ball is all about
         </h2>
       <motion.div 

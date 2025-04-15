@@ -22,8 +22,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
        
         <div className="flex items-center gap-3">
-          <Image src={logo} alt="RaP7 Logo" width={50} height={50} />
-          <span className="text-2xl font-bold text-gray-800">RaP7 Ball</span>
+          <Image src={logo} alt="RaP7 Logo" width={80} height={80} />
+          <span className="text-2xl font-bold text-customBlue">RaP <span className='text-red-500 text-3xl'>7</span> Ball</span>
         </div>
 
        
@@ -45,7 +45,8 @@ const Footer = () => {
 
       
       <div className="mt-8 text-center text-sm text-gray-500">
-        &copy; {currentYear} RaP7 Ball. All rights reserved.
+      Copyrigh &copy; {currentYear} Rap7Balls. All Rights Reserved. Made with <span className='text-red-500 text-lg mx-1'>♡ </span> By 
+      <a className='text-customBlue ml-1 underline' href="https://www.cozaktechnologies.in/">Cozak Technologies</a>
       </div>
     </footer>
   );
