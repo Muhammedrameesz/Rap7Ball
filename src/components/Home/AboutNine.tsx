@@ -38,7 +38,7 @@ const contents: contentType[] = [
 
 export default function AboutNine() {
   return (
-    <div className="px-4 md:px-16 py-16 bg-gray-50">
+    <div className="relative z-10 px-4 md:px-16 py-16 bg-gray-50">
       <main className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 max-w-7xl mx-auto">
         {/* Image Section */}
         <motion.section
