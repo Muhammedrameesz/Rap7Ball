@@ -37,7 +37,7 @@ export default function AboutFour() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="space-y-8"
+          className="order-2 md:order-1 space-y-8"
         >
          
           <div className="space-y-6">
@@ -71,7 +71,7 @@ export default function AboutFour() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative w-full h-64 sm:h-80 md:h-[450px] rounded-2xl overflow-hidden shadow-xl"
+          className="order-1 md:order-2 relative w-full h-64 sm:h-80 md:h-[450px] rounded-2xl overflow-hidden shadow-xl"
         >
           <Image
             src={ImageTwo}

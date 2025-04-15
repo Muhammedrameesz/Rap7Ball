@@ -3,7 +3,6 @@
 import ImageFour from "@/images/76088ea9-27ff-4c05-8e83-1ee6edcb1b4f-11.jpg";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { MdCheckCircle } from "react-icons/md"; // More semantic than plain check
 import type { ReactNode } from "react";
 import { FaArrowDown, FaRedoAlt, FaRegHandshake, FaShieldAlt } from "react-icons/fa";
 
@@ -45,8 +44,9 @@ export default function AboutSeven() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
+          className="order-2 md:order-1"
         >
-          <div className="relative w-full h-64 md:h-[450px] rounded-2xl overflow-hidden shadow-xl">
+          <div className=" relative w-full h-64 md:h-[450px] rounded-2xl overflow-hidden shadow-xl">
             <Image
               src={ImageFour}
               alt="RaP7 Pitching Style Explanation"
@@ -63,7 +63,7 @@ export default function AboutSeven() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="space-y-8"
+          className="order-1 md:order-2 space-y-8"
         >
           
 

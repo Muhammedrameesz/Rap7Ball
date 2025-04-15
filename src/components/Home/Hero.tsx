@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <div className="py-10 px-4 md:px-16 min-h-screen flex items-center justify-center text-gray-950">
-      <div className="absolute z-[-1] left-1/2 top-0 h-full w-[50%] bg-yellow-500"></div>
+    <div className="px-4 px-10 md:px-16 h-screen flex items-center justify-center text-gray-950 overflow-y-hidden">
+      <div className="absolute z-[-1] left-1/2 top-0 h-screen  w-[50%] bg-yellow-500"></div>
 
       <main className="grid grid-cols-1 md:grid-cols-2 items-center  w-full max-w-7xl">
         <motion.section
