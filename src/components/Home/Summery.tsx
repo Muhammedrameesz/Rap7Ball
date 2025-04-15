@@ -64,10 +64,10 @@ export default function CardSection() {
           <h1 className=" shadow-sm shadow-red-500 text-lg font-semibold text-red-500  rounded-full px-4 py-1">
           Rap <span className="text-white text-xl">7</span> Ball
           </h1>
-          <h1 className="text-4xl text-gray-300 font-bold">
+          <h1 className="text-xl md:text-2xl lg:text-4xl text-gray-300 font-bold">
           Where Cricket Meets Baseball — 
           </h1>
-          <h1 className="text-4xl text-gray-300 font-bold">Rap7 style! Game on!</h1>
+          <h1 className="text-xl md:text-2xl lg:text-4xl text-gray-300 font-bold">Rap7 style! Game on!</h1>
         </motion.section>
 
         <motion.section

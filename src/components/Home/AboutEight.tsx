@@ -1,78 +1,91 @@
-'use client'
+"use client";
 
 import ImageTwoo from "@/images/RaP7 Step by Step Procedure_page-0017.jpg";
-
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { MdCheck } from "react-icons/md";
+import { GiBat } from "react-icons/gi"; // Changed to a different icon
+import { GiTimeBomb } from "react-icons/gi"; // New icon
+import { GiBaseballBat } from "react-icons/gi"; // New icon
+import { GiRunningShoe } from "react-icons/gi"; // New icon
 
-interface contentType{
-     title:string,
-     icon:React.ReactNode
+interface contentType {
+  title: string;
+  icon: React.ReactNode;
 }
 
-const contents:contentType[] = [
+const contents: contentType[] = [
   {
-    title:
-      "An inning ends after 7 overs of 7 pitches.",
-    icon: <MdCheck />,
+    title: "An inning ends after 7 overs of 7 pitches.",
+    icon: <GiBat size={20} />, 
   },
   {
     title:
       "The batting team are then out and it becomes their turn to field and then it is fielding team’s turn to bat.",
-    icon: <MdCheck />,
+    icon: <GiTimeBomb size={20} />, 
+  },
+  {
+    title: "A game should be completed in 2 hours and 28 minutes for an inning.",
+    icon: <GiBaseballBat size={20} />, 
+  },
+  {
+    title: "After an inning, 2 minutes for the offensive and defensive teams to change over.",
+    icon: <GiRunningShoe size={20} />, 
   },
   {
     title:
-      "A game should be completed in 2 hours and 28 minutes for an inning.",
-    icon: <MdCheck />,
-  },
-  {
-    title:
-      "After an inning, 2 minutes for the offensive and defensive teams to change over",
-    icon: <MdCheck />,
-  },
-  {
-    title:
-      "After hitting a ball, the batsman has to run to first base only if he has enough time to reach there safely",
-    icon: <MdCheck />,
+      "After hitting a ball, the batsman has to run to first base only if he has enough time to reach there safely.",
+    icon: <GiBaseballBat size={20} />, 
   },
 ];
 
 export default function AboutEight() {
   return (
-    <div className="px-4 md:px-16 py-16 bg-gray-50">
-      <main className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
-     
+    <div className="px-4 md:px-16 py-16 bg-white">
+      <main className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 max-w-7xl mx-auto">
+        {/* Content Section */}
         <motion.section
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{once:true}}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="space-y-8"
         >
-         
-         
-
           <div className="space-y-4 md:space-y-8">
             {contents?.map((item, i) => (
-              <div key={i} className="flex items-start space-x-4">
-                <div className="text-white text-lg bg-purple-800 rounded-full p-1">
+              <div
+                key={i}
+                className="flex items-start gap-4 p-4 bg-gray-50 font-medium rounded-xl border border-gray-200 shadow-sm"
+              >
+                <div
+                  className={`text-white p-2 rounded-full shadow ${
+                    i === 1
+                      ? "bg-green-500"
+                      : i === 2
+                      ? "bg-red-500"
+                      :i===3
+                      ? "bg-yellow-500"
+                      :i===4
+                      ? "bg-blue-500"
+                      : "bg-purple-700"
+                  }`}
+                >
                   {item.icon}
                 </div>
-                <h2 className="text-xl font-medium text-gray-800">{item.title}</h2>
+                <p className="text-gray-800 text-base sm:text-lg leading-relaxed">
+                  {item.title}
+                </p>
               </div>
             ))}
           </div>
         </motion.section>
 
-      
+        {/* Image Section */}
         <motion.section
           initial={{ opacity: 0, x: 50 }}
-         whileInView={{ opacity: 1, x: 0 }}
-         viewport={{once:true}}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative w-full h-64 md:h-[450px] rounded-xl overflow-hidden"
+          className="relative w-full h-64 md:h-[450px] rounded-xl overflow-hidden shadow-xl"
         >
           <Image
             src={ImageTwoo}

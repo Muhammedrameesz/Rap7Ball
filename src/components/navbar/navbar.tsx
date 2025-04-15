@@ -34,7 +34,8 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-4 z-50 w-full md:w-[90%] mx-auto rounded-non md:rounded-full bg-white text-gray-900 shadow-base px-6 md:px-14 py-4 flex justify-between items-center">
+      <nav className="sticky top-0 md:top-4 z-50 w-full md:w-[90%] mx-auto rounded-non md:rounded-full bg-white 
+      text-gray-900 shadow-base px-6 md:px-14 py-4 flex justify-between items-center">
   
         <div className="flex items-center gap-2 cursor-pointer" onClick={handleLogoClick}>
           <Image src={Logo} alt="RaP7 Logo" width={60} height={50} />

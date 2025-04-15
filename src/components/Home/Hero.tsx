@@ -31,7 +31,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className=""
         >
-          <div className="absolute left-1/2 -translate-x-1/2 top-1/2  -translate-y-1/2 w-[50%] h-64 md:h-[500px] rounded-xl overflow-hidden">
+          <div className="relative md:absolute md:left-1/2 md:-translate-x-1/2 md:top-1/2  md:-translate-y-1/2 w-full md:w-[50%] h-64 md:h-[500px] rounded-xl overflow-hidden">
             <Image
               src={ImageLog}
               alt="image"

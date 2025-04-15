@@ -3,40 +3,42 @@
 import ImageTwo from "@/images/RaP7 Step by Step Procedure_page-0003.jpg";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { MdCheck } from "react-icons/md";
-interface contentType{
-    title:string,
-    icon:React.ReactNode
+import { MdSportsCricket } from "react-icons/md";
+import {  GiCricketBat } from "react-icons/gi";
+
+interface ContentType {
+  title: string;
+  icon: React.ReactNode;
 }
-const contents: contentType[] = [
+
+const contents: ContentType[] = [
   {
     title:
       "Baseball is America’s National Pastime and Cricket is the second most popular sport in the world.",
-    icon: <MdCheck/>,
+    icon: <GiCricketBat size={20} />,
   },
   {
     title:
-      "RaP7 ball game is a hybrid of Baseball and Cricket, played using rules taken from both of these popular sports and using common safety gears.",
-    icon: <MdCheck />,
+      "RaP7 Ball is a hybrid of Baseball and Cricket, blending rules and safety gear from both iconic sports.",
+    icon: <MdSportsCricket size={20} />,
   },
 ];
 
 export default function AboutTwo() {
   return (
-    <div className="px-4 md:px-16 ">
-      <main className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
-       
+    <div className="px-4 md:px-16 py-10 overflow-x-hidden bg-gray-50">
+      <main className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 max-w-7xl mx-auto">
+        {/* Image Section */}
         <motion.section
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{once:true}}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative w-full h-64 md:h-[450px] rounded-xl overflow-hidden ">
-            <div className="absolute inset-0 "></div>
+          <div className="relative w-full h-64 sm:h-80 md:h-[450px] rounded-2xl overflow-hidden shadow-xl">
             <Image
               src={ImageTwo}
-              alt="image"
+              alt="Step-by-step procedure"
               fill
               className="object-cover"
               priority
@@ -44,25 +46,28 @@ export default function AboutTwo() {
           </div>
         </motion.section>
 
-    
+        {/* Content Section */}
         <motion.section
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{once:true}}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="space-y-8"
         >
          
 
-          <div className="space-y-4 md:space-y-8">
-            {contents?.map((item, i) => (
-              <div key={i} className="flex items-start space-x-4">
-                <div className="text-white text-lg bg-purple-800 rounded-full p-1">
+          <div className="space-y-6">
+            {contents.map((item, i) => (
+              <div
+                key={i}
+                className="flex items-start font-medium gap-4 p-4 bg-white rounded-xl border border-gray-200 shadow-sm"
+              >
+                <div className={`text-white  p-2 rounded-full shadow ${i==0 ? "bg-purple-700":"bg-green-500"}` }>
                   {item.icon}
                 </div>
-                <h2 className="text-xl font-medium text-gray-800">
+                <p className="text-gray-800 text-base sm:text-lg leading-relaxed">
                   {item.title}
-                </h2>
+                </p>
               </div>
             ))}
           </div>

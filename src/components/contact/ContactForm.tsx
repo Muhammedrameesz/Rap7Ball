@@ -18,7 +18,7 @@ export default function ContactForm() {
           />
         </div>
         <div className=" space-y-6">
-          <h1 className="text-center font-extrabold text-4xl ml-5 text-gray-950">
+          <h1 className="text-center font-bold text-2xl md:text-3xl lg:text-4xl ml-5 text-gray-900">
             Contact-Us
           </h1>
 
