@@ -45,9 +45,14 @@ const Footer = () => {
 
       
       <div className="mt-8 text-center text-sm text-gray-500">
-      Copyrigh &copy; {currentYear} Rap7Balls. All Rights Reserved. Made with <span className='text-red-500 text-lg mx-1'>♡ </span> By 
-      <a className='text-customBlue ml-1 underline' href="https://www.cozaktechnologies.in/">Cozak Technologies</a>
-      </div>
+  Copyright &copy; {currentYear} RaP7 All Rights Reserved. Made with
+  <span className="text-red-500 text-lg mx-1">♡</span>
+  by
+  <a className="text-customBlue ml-1 underline" href="https://www.cozaktechnologies.in/" target="_blank" rel="noopener noreferrer">
+    Cozak Technologies
+  </a>
+</div>
+
     </footer>
   );
 };
