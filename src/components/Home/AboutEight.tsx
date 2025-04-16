@@ -44,10 +44,13 @@ export default function AboutEight() {
       <main className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 max-w-7xl mx-auto">
         {/* Content Section */}
         <motion.section
-          initial={{ opacity: 0, scale:0 }}
-          whileInView={{ opacity: 1, scale:1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 2,
+              ease: [0.25, 1, 0.5, 1]
+            }}
           className="space-y-8"
         >
           <div className="space-y-4 md:space-y-8">
@@ -81,10 +84,13 @@ export default function AboutEight() {
 
         {/* Image Section */}
         <motion.section
-          initial={{ opacity: 0, scale:0 }}
-          whileInView={{ opacity: 1, scale:1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 2,
+              ease: [0.25, 1, 0.5, 1]
+            }}
           className="relative w-full h-64 md:h-[450px] rounded-xl overflow-hidden shadow-xl"
         >
           <Image

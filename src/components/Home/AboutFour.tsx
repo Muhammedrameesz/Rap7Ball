@@ -33,10 +33,13 @@ export default function AboutFour() {
       <main className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 max-w-7xl mx-auto">
         {/* Content Section */}
         <motion.section
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+           initial={{ opacity: 0, scale: 0 }}
+           whileInView={{ opacity: 1, scale: 1 }}
+           viewport={{ once: true }}
+           transition={{
+             duration: 2,
+             ease: [0.25, 1, 0.5, 1]
+           }}
           className="order-2 md:order-1 space-y-8"
         >
          
@@ -67,10 +70,13 @@ export default function AboutFour() {
 
         {/* Image Section */}
         <motion.section
-          initial={{ opacity: 0, scale:0 }}
-          whileInView={{ opacity: 1, scale:1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 2,
+              ease: [0.25, 1, 0.5, 1]
+            }}
           className="order-1 md:order-2 relative w-full h-64 sm:h-80 md:h-[450px] rounded-2xl overflow-hidden shadow-xl"
         >
           <Image

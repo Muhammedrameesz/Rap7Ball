@@ -11,10 +11,13 @@ export default function AboutSixth() {
       <main className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-7xl mx-auto">
         {/* Top Image */}
         <motion.section
-          initial={{ opacity: 0, scale:0 }}
-          whileInView={{ opacity: 1, scale:1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 2,
+              ease: [0.25, 1, 0.5, 1]
+            }}
           className="relative w-full h-64 md:h-[450px] rounded-2xl overflow-hidden shadow-md"
         >
           <Image
@@ -28,10 +31,13 @@ export default function AboutSixth() {
 
         {/* Bottom Image */}
         <motion.section
-          initial={{ opacity: 0, scale:0 }}
-          whileInView={{ opacity: 1, scale:1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 2,
+              ease: [0.25, 1, 0.5, 1]
+            }}
           className="relative w-full h-64 md:h-[450px] rounded-2xl overflow-hidden shadow-md"
         >
           <Image
