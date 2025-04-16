@@ -55,8 +55,8 @@ export default function CardSection() {
     <div className="font-jakarta py-10 bg-white space-y-10  ">
       <div className="grid grid-cols-1 md:grid-cols-3 px-6 md:px-10 mx-auto max-w-7xl gap-7">
         <motion.section
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, scale:0 }}
+          whileInView={{ opacity: 1, scale:1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="flex flex-col justify-center items-center text-center gap-5 col-span-1 md:col-span-2 bg-gradient-to-br from-gray-950 via-customBlue to-black py-16 text-white rounded-3xl"
@@ -71,8 +71,8 @@ export default function CardSection() {
         </motion.section>
 
         <motion.section
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, scale:0 }}
+          whileInView={{ opacity: 1, scale:1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="flex flex-col justify-center bg-white shadow-newNormal rounded-3xl space-y-5 p-8"
@@ -111,8 +111,8 @@ export default function CardSection() {
         {features.map((item, i) => (
           <motion.section
             key={i}
-            initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale:0 }}
+            whileInView={{ opacity: 1, scale:1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="flex flex-col justify-center bg-white shadow-newNormal rounded-3xl space-y-5 p-8"

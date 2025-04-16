@@ -67,8 +67,8 @@ export default function AboutFour() {
 
         {/* Image Section */}
         <motion.section
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, scale:0 }}
+          whileInView={{ opacity: 1, scale:1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="order-1 md:order-2 relative w-full h-64 sm:h-80 md:h-[450px] rounded-2xl overflow-hidden shadow-xl"

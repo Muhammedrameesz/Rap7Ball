@@ -4,39 +4,18 @@ import Image from "next/image";
 import ImageLog from "@/images/RaP7_Step_by_Step_Procedure_page-0003-removebg-preview.png";
 import { motion } from "framer-motion";
 
-const containerVariants = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut",
-    },
-  },
-};
-
 export default function Hero() {
   return (
     <div className="h-screen w-full bg-white flex items-center justify-center px-4 md:px-16 overflow-hidden ">
-      <motion.main
-        variants={containerVariants}
-        initial="hidden"
-        animate="show"
-        className="grid grid-cols-1 md:grid-cols-2 justify-center  w-full max-w-7xl "
-      >
+      <motion.main className="grid grid-cols-1 md:grid-cols-2 justify-center  w-full max-w-7xl ">
         {/* Left Content */}
         <motion.section
-          variants={itemVariants}
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.8,
+            ease: "easeOut",
+          }}
           className="space-y-6 text-center md:text-left  "
         >
           <h1 className="text-center text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-gray-900 ">
@@ -53,10 +32,23 @@ export default function Hero() {
 
         {/* Right Image */}
         <motion.section
-          variants={itemVariants}
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.8,
+            ease: "easeOut",
+          }}
           className="relative flex justify-center items-center  md:min-h-[500px] "
         >
-          <div className="hidden md:flex absolute right-10 top-20 z-10">
+          <motion.div 
+           initial={{opacity:0,scale:0}}
+           animate ={{opacity:1,scale:1}}
+           transition={{
+            duration:1,
+            delay:0.5,
+            ease:"easeOut"
+           }}
+          className="hidden md:flex absolute right-10 top-20 z-10">
             <svg
               width="184"
               height="192"
@@ -70,8 +62,8 @@ export default function Hero() {
                 fill="#2b318a"
               ></path>
             </svg>
-          </div>
-          
+          </motion.div>
+
           <div className="md:absolute -left-1/3 top-1/7 w-full h-64 sm:h-80 md:h-[450px] rounded-xl overflow-hidden ">
             <Image
               src={ImageLog}
