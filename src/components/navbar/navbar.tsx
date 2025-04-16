@@ -15,6 +15,8 @@ interface navType {
 }
 const navLinks:navType[] = [
   { name: "Home", path: "/" },
+  { name: "About Us", path: "/about-us" },
+  { name: "About The Game", path: "/about-game" },
   { name: "Gallery", path: "/gallery" },
   { name: "Contact Us", path: "/contact-us" },
 ];

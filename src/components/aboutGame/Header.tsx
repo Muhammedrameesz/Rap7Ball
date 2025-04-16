@@ -4,7 +4,7 @@ import Banner from "@/images/banner/banner-bg1.jpg";
 import { motion } from "framer-motion";
 
 
-export default function GalleryHeader() {
+export default function GameHeader() {
   return (
     <div
       className="relative flex items-center justify-center min-h-[300px] bg-no-repeat bg-cover bg-center"
@@ -12,15 +12,15 @@ export default function GalleryHeader() {
         backgroundImage: `url(${Banner.src})`, 
       }}
     >
-      <motion.h1 
+      <motion.h1
        initial={{opacity:0,x:-100}}
        animate = {{opacity:1,x:0}}
        transition={{
         duration:0.8,
         ease:"easeOut"
-       }}
+       }} 
       className="text-center text-gray-900 font-bold text-2xl md:text-4xl lg:text-5xl">
-        Gallery
+        About The Game
       </motion.h1>
       <RandomShapes />
     </div>

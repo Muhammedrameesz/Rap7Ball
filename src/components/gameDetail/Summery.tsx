@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { FaArrowLeft } from "react-icons/fa";
 import { FaVolleyball } from "react-icons/fa6";
 
 interface cardType {
@@ -55,32 +57,34 @@ export default function CardSection() {
     <div className="font-jakarta py-10 bg-white space-y-10  ">
       <div className="grid grid-cols-1 md:grid-cols-3 px-6 md:px-10 mx-auto max-w-7xl gap-7">
         <motion.section
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 2,
-              ease: [0.25, 1, 0.5, 1]
-            }}
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 2,
+            ease: [0.25, 1, 0.5, 1],
+          }}
           className="flex flex-col justify-center items-center text-center gap-5 col-span-1 md:col-span-2 bg-gradient-to-br from-gray-950 via-customBlue to-black py-16 text-white rounded-3xl"
         >
           <h1 className=" shadow-sm shadow-red-500 text-lg font-semibold text-red-500  rounded-full px-4 py-1">
-          Rap <span className="text-white text-xl">7</span> Ball
+            Rap <span className="text-white text-xl">7</span> Ball
           </h1>
           <h1 className="text-xl md:text-2xl lg:text-4xl text-gray-300 font-bold">
-          Where Cricket Meets Baseball — 
+            Where Cricket Meets Baseball —
           </h1>
-          <h1 className="text-xl md:text-2xl lg:text-4xl text-gray-300 font-bold">Rap7 style! Game on!</h1>
+          <h1 className="text-xl md:text-2xl lg:text-4xl text-gray-300 font-bold">
+            Rap7 style! Game on!
+          </h1>
         </motion.section>
 
         <motion.section
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 2,
-              ease: [0.25, 1, 0.5, 1]
-            }}
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 2,
+            ease: [0.25, 1, 0.5, 1],
+          }}
           className="flex flex-col justify-center bg-white shadow-newNormal rounded-3xl space-y-5 p-8"
         >
           <div className="flex gap-5 items-center">
@@ -122,7 +126,7 @@ export default function CardSection() {
             viewport={{ once: true }}
             transition={{
               duration: 2,
-              ease: [0.25, 1, 0.5, 1]
+              ease: [0.25, 1, 0.5, 1],
             }}
             className="flex flex-col justify-center bg-white shadow-newNormal rounded-3xl space-y-5 p-8"
           >
@@ -147,6 +151,18 @@ export default function CardSection() {
             <div className="bg-gray-200 h-[1px] w-[100%]" />
           </motion.section>
         ))}
+      </div>
+
+
+      <div className=" px-10 md:px-20">
+      <Link
+        href={"/"}
+        className="bg-transparen ttext-gray-900 border group cursor-pointer w-fit
+          text-sm md:text-base font-medium px-6 py-3  rounded-full transition-all duration-300 shadow-md flex items-center gap-2"
+      >
+        <FaArrowLeft className="text-sm transform group-hover:-translate-x-1 transition-transform duratuion-300" />
+        Back To Home
+      </Link>
       </div>
     </div>
   );

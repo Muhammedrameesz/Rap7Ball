@@ -23,59 +23,56 @@ const images = [imae3, imae4, imae5, imae6, imae2, imae1];
 
 export function CarouselDemo() {
   return (
-    <section
-      className="relative w-full text-white py-16 md:py-28 px-4 md:px-8 bg-no-repeat bg-center bg-cover"
-      style={{
-        backgroundImage: `url(https://img.freepik.com/premium-photo/3d-render-cricket-stadium-with-playground-bat-ball-stamps-with-helmet_752894-87.jpg?w=740)`,
-        // backgroundSize: "cover",
-        // backgroundPosition: "center",
-      }}
-    >
- 
-      <div className="absolute inset-0 bg-black/80 z-0" />
+    <section className="relative w-full overflow-x-hidden bg-black text-white py-16 md:py-28 px-4 md:px-8">
     
-      <div className="relative z-10 max-w-4xl mx-auto text-center mb-10 px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-red-700">
-          RaP <span className="text-4xl text-customBlue md:text-5xl">7</span> Ball
-        </h2>
-        
-      </div>
+      <div className="relative z-10 max-w-7xl mx-auto mb-12 px-2 md:px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+          <motion.div
+            className="lg:col-span-2"
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            <Carousel className="w-full max-w-2xl mx-auto">
+              <CarouselContent>
+                {images.map((src, index) => (
+                  <CarouselItem key={index} className="md:basis-1/1">
+                    <div className="p-2">
+                      <Card className=" border-none shadow-xl rounded-2xl">
+                        <CardContent className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl">
+                          <Image
+                            src={src}
+                            alt={`RaP 7 Ball Image ${index + 1}`}
+                            fill
+                            className="object-cover"
+                            priority={index === 0}
+                          />
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-black hover:bg-gray-200 cursor-pointer" />
+              <CarouselNext className="text-black hover:bg-gray-200 cursor-pointer" />
+            </Carousel>
+          </motion.div>
 
-    
-      <motion.section
-        className="relative z-10"
-        initial={{ opacity: 0, scale: 0.5 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{
-          duration: 1,
-          ease: [0.25, 0.1, 0.25, 1],
-        }}
-      >
-        <Carousel className="w-full max-w-3xl mx-auto">
-          <CarouselContent>
-            {images.map((src, index) => (
-              <CarouselItem key={index} className="md:basis-1/1">
-                <div className="p-2">
-                  <Card className="bg-gray-800 border-none shadow-xl rounded-2xl">
-                    <CardContent className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl">
-                      <Image
-                        src={src}
-                        alt={`RaP 7 Ball Image ${index + 1}`}
-                        fill
-                        className="object-cover"
-                        priority={index === 0}
-                      />
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className=" text-black  hover:bg-gray-200 cursor-pointer" />
-          <CarouselNext className="text-black  hover:bg-gray-200 cursor-pointer" />
-        </Carousel>
-      </motion.section>
+        
+          <motion.div
+            className="lg:col-span-1 text-center lg:text-left px-4"
+            initial={{ opacity: 0, scale:0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+          >
+            <h3 className="text-gray-200 text-xl sm:text-3xl md:text-4xl lg:text-5xl font-medium">
+              Meet the team behind RaP7 Ball – their passion drives the game forward.
+            </h3>
+          </motion.div>
+        </div>
+      </div>
     </section>
   );
 }

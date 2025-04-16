@@ -18,11 +18,14 @@ export default function ContactForm() {
           />
         </div>
         <div className=" space-y-6">
-          <h1 className="text-center font-bold text-2xl md:text-3xl lg:text-4xl ml-5 text-gray-900">
-            Contact-Us
-          </h1>
+          <p className="text-center text-gray-600">
+            Do you have any questions? Feel free to ask us anytime!
+          </p>
 
-          <form action="" className="space-y-8 bg-white shadow-newNormal p-8 rounded ">
+          <form
+            action=""
+            className="space-y-8 bg-white shadow-newNormal p-8 rounded "
+          >
             <div className="flex flex-col sm:flex-row gap-6">
               <input
                 type="text"
