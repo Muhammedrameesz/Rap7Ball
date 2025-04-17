@@ -17,10 +17,10 @@ export const metadata: Metadata = {
 //   variable: "--font-plus-jakarta",
 //   display: "swap",
 // });
-const Cinzelf =Outfit({
+const outfit = Outfit({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
-  variable: "--font-plus-jakarta",
+  variable: "--font-outfit",
   display: "swap",
 });
 
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${Cinzelf.className} antialiased `}
+        className={`${outfit.className} antialiased `}
       >
         <Navbar />
         {children}
