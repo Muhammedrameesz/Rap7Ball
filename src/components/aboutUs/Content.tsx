@@ -17,15 +17,16 @@ export default function Content() {
           viewport={{ once: true }}
           className="  space-y-6  rounded-br-[20px]"
         >
-          <div className="w-[400px] h-[300px] mx-auto">
-            <Image
-              alt="Image"
-              src="https://img.freepik.com/free-photo/medium-shot-man-working-as-real-estate-agent_23-2151064891.jpg?t=st=1744897463~exp=1744901063~hmac=34e9db20938eb7b57817f34296b759abfe8b4874a4dc83db6552895d8506d9ce&w=826"
-              width={400}
-              height={300}
-              className="rounded-xl object-cover shadow-md w-full h-full"
-            />
-          </div>
+         <div className="w-full max-w-md mx-auto">
+  <Image
+    alt="Image"
+    src="https://img.freepik.com/free-photo/medium-shot-man-working-as-real-estate-agent_23-2151064891.jpg?t=st=1744897463~exp=1744901063~hmac=34e9db20938eb7b57817f34296b759abfe8b4874a4dc83db6552895d8506d9ce&w=826"
+    width={826}
+    height={620}
+    className="rounded-xl object-cover shadow-md w-full h-auto"
+  />
+</div>
+
           <p
             onMouseEnter={() => setActive("1")}
             onMouseLeave={() => setActive("")}
