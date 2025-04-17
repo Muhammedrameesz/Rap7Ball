@@ -17,17 +17,18 @@ export default function Content() {
           viewport={{ once: true }}
           className="  space-y-6  rounded-br-[20px]"
         >
-         <div className="w-full max-w-md mx-auto">
-  <Image
-    alt="Image"
-    src="https://img.freepik.com/free-photo/medium-shot-man-working-as-real-estate-agent_23-2151064891.jpg?t=st=1744897463~exp=1744901063~hmac=34e9db20938eb7b57817f34296b759abfe8b4874a4dc83db6552895d8506d9ce&w=826"
-    width={826}
-    height={620}
-    className="rounded-xl object-cover shadow-md w-full h-auto"
-  />
-</div>
+          <div className="w-full max-w-md mx-auto">
+            <Image
+              alt="Image"
+              src="https://img.freepik.com/free-photo/medium-shot-man-working-as-real-estate-agent_23-2151064891.jpg?t=st=1744897463~exp=1744901063~hmac=34e9db20938eb7b57817f34296b759abfe8b4874a4dc83db6552895d8506d9ce&w=826"
+              width={826}
+              height={620}
+              className="rounded-xl object-cover shadow-md w-full h-auto"
+            />
+          </div>
 
           <p
+            onClick={()=>setActive("1")}
             onMouseEnter={() => setActive("1")}
             onMouseLeave={() => setActive("")}
             className="relative z-10 hover:text-white transition-all duration-500 bg-white p-6 rounded-tl-[40px] 
@@ -51,6 +52,7 @@ export default function Content() {
           </p>
 
           <p
+           onClick={()=>setActive("2")}
             onMouseEnter={() => setActive("2")}
             onMouseLeave={() => setActive("")}
             className="relative z-10 hover:text-white transition-all duration-500 bg-white p-6 rounded-tl-[40px] border-2 border-dashed border-green-500"
@@ -85,6 +87,7 @@ export default function Content() {
           className=" space-y-6 rounded-t-[30px] rounded-bl-[40px]"
         >
           <p
+           onClick={()=>setActive("3")}
             onMouseEnter={() => setActive("3")}
             onMouseLeave={() => setActive("")}
             className="relative z-10 hover:text-white transition-all group duration-500 bg-white p-6 rounded-tl-[40px] border-2 border-dashed border-customBlue"
@@ -114,6 +117,7 @@ export default function Content() {
           </p>
 
           <p
+           onClick={()=>setActive("4")}
             onMouseEnter={() => setActive("4")}
             onMouseLeave={() => setActive("")}
             className="relative z-10 hover:text-white transition-all group duration-500 bg-white p-6 rounded-tl-[40px] border-2 border-dashed border-pink-500 "
@@ -137,6 +141,7 @@ export default function Content() {
             />
           </p>
           <p
+           onClick={()=>setActive("5")}
             onMouseEnter={() => setActive("5")}
             onMouseLeave={() => setActive("")}
             className="relative z-10 hover:text-white transition-all group duration-500 bg-white p-6 rounded-tl-[40px] 
@@ -167,6 +172,7 @@ export default function Content() {
           </p>
 
           <p
+           onClick={()=>setActive("6")}
             onMouseEnter={() => setActive("6")}
             onMouseLeave={() => setActive("")}
             className="relative z-10 hover:text-white transition-all group duration-500 bg-white 
@@ -205,8 +211,10 @@ export default function Content() {
             height={700}
             className="rounded-lg object-cover w-full h-auto"
           />
-          <p className="absolute left-1/2 -bottom-14 transform -translate-x-1/2 bg-gray-900 text-gray-100 p-5 rounded-2xl 
-          text-base leading-relaxed shadow-lg max-w-sm w-[90%] sm:w-auto text-center">
+          <p
+            className="absolute left-1/2 -bottom-14 transform -translate-x-1/2 bg-gray-900 text-gray-100 p-5 rounded-2xl 
+          text-base leading-relaxed shadow-lg max-w-sm w-[90%] sm:w-auto text-center"
+          >
             March 2023 – A few Kerala Club members and Michiganders participated
             in a friendly RaP7 Ball Game.
           </p>
