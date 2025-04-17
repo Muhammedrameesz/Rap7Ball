@@ -16,7 +16,7 @@ const images = Array(5).fill(ImageLog);
 
 export default function HeroCarousel() {
   return (
-    <div className="relative flex justify-center items-center w-full overflow-hidden min-h-[300px] md:min-h-screen">
+    <div className="relative flex justify-center items-center w-full overflow-hidden min-h-[350px] md:min-h-screen">
       <Shapes />
 
       {/* Left Triangle */}
@@ -55,7 +55,7 @@ export default function HeroCarousel() {
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, ease: "easeOut" }}
-                className="w-60 sm:w-80 md:w-[600px] lg:w-[700px] h-auto px-4"
+                className="w-80  md:w-[600px] lg:w-[700px] h-auto px-4"
               >
                 <Image
                   src={img}
@@ -73,10 +73,10 @@ export default function HeroCarousel() {
 
         {/* Navigation buttons */}
         <CarouselPrevious
-          className="absolute top-1/2 left-1/5 -translate-y-1/2 z-20 bg-white text-black p-2 rounded-full shadow-md transition hover:shadow-custom"
+          className="absolute top-1/2 left-2 md:left-1/5 -translate-y-1/2 z-20 bg-white text-black p-2 rounded-full shadow-md transition hover:shadow-custom"
         />
         <CarouselNext
-          className="absolute top-1/2 right-1/5 -translate-y-1/2 z-20 bg-white text-black p-2 rounded-full shadow-md transition hover:shadow-custom"
+          className="absolute top-1/2 right-2 md:right-1/5 -translate-y-1/2 z-20 bg-white text-black p-2 rounded-full shadow-md transition hover:shadow-custom"
         />
       </Carousel>
     </div>
