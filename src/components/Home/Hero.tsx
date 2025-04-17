@@ -100,7 +100,7 @@ export default function HeroCarousel() {
                 transition={{ duration: 1, ease: "easeOut" }}
                 className="w-96  md:w-[600px] lg:w-[700px] h-auto px-4 relative"
               >
-                <div className="absolute inset-0 bg-white/20 backdrop-blur-lg  shadow-base rounded-3xl z-[-1]" />
+                <div className="absolute inset-0 bg-white/20 backdrop-blur-lg border border-gray-200 shadow-base rounded-3xl z-[-1]" />
 
                 <Image
                   src={img}
