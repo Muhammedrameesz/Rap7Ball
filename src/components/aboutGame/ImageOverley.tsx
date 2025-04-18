@@ -77,7 +77,8 @@ const ImageOverley: React.FC = () => {
               className="object-cover"
             />
             <motion.div
-              className="absolute inset-0 space-y-10 z-10 bg-black/80 bg-opacity-50 flex flex-col items-center justify-center text-white"
+              className="absolute inset-0 space-y-10 z-10 bg-black/80 bg-opacity-50 flex 
+              flex-col items-center justify-center text-white "
               variants={{
                 rest: { opacity: 1, y: 0 },
                 hover: { opacity: 0, y: -20 },
@@ -95,7 +96,7 @@ const ImageOverley: React.FC = () => {
               </motion.div>
 
               <motion.h3
-                className="mt-2 text-lg md:text-xl font-semibold"
+                className="mt-2 text-lg md:text-xl font-semibold max-w-xs text-center "
                 variants={{
                   rest: { opacity: 1, y: 0 },
                   hover: { opacity: 0, y: 20 },
