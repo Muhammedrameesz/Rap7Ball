@@ -17,7 +17,7 @@ export default function Content() {
   const [active, setActive] = useState("");
   return (
     <div className="bg-white text-gray-900 min-h-screen p-4 md:p-6 lg:p-10 space-y-10">
-      <section className="grid grid-cols-1 md:grid-cols-2">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="w-full max-w-md mx-auto">
           <Image
             alt="Image"

@@ -74,7 +74,7 @@ const HeroCarousel: React.FC = () => {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-white via-[#fdfdfd] to-red-100 min-h-screen flex items-center justify-center py-16">
+    <section className="relative bg-gradient-to-br from-pink-50 via-[#fdfdfd] to-red-100 min-h-screen flex items-center justify-center py-16">
       <div className="relative z-10 max-w-7xl w-full px-4">
         <Slider {...settings}>
           {images.map((src, index) => (
