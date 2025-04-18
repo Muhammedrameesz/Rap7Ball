@@ -10,6 +10,8 @@ interface navType {
 
 const footerLinks: navType[] = [
   { href: "/", label: "Home" },
+  { href: "/about-us", label: "About Us" },
+  { href: "/about-game", label: "About The Game" },
   { href: "/gallery", label: "Gallery" },
   { href: "/contact-us", label: "Contact Us" },
 ];

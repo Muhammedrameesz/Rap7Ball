@@ -1,125 +1,102 @@
+// components/HeroCarousel.tsx
 "use client";
 
+import React, { FC } from "react";
+import Slider from "react-slick";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import ImageLog from "@/images/RaP7_Step_by_Step_Procedure_page-0003-removebg-preview.png";
-import Shapes from "@/app/_Animations/Shapes";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Logo from "@/images/RaP7_Step_by_Step_Procedure_page-0003-removebg-preview.png";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const images = Array(5).fill(ImageLog);
+const images = [
+  Logo,
+  "https://img.freepik.com/free-vector/players-referee-baseball-match-game-field-isometric-illustration_1284-28484.jpg?t=st=1744987092~exp=1744990692~hmac=d852980cc1791e879e113ca89283d9f2ad69b8d1c874a6725904c55c95fda7c3&w=740",
+  "https://img.freepik.com/free-photo/superheroes-are-playing-baseball-3d-rendered-illustration_1057-32197.jpg?t=st=1744987112~exp=1744990712~hmac=dc983ba4b7f1cc5f6368f28f42cb70caea5f1ba3b6b08d8bbc151c4bf0a1dac9&w=740",
+  "https://img.freepik.com/free-vector/isometric-baseball-flowchart_1284-59152.jpg?t=st=1744987159~exp=1744990759~hmac=040bf83aceee4ed2841bc0fdf2c25156628da80314189f9aa202d292e51b3308&w=826",
+];
 
-export default function HeroCarousel() {
+interface ArrowProps {
+  className?: string;
+  style?: React.CSSProperties;
+  onClick?: () => void;
+}
+
+const CustomNextArrow: FC<ArrowProps> = ({ onClick }) => {
   return (
-    <div className="relative flex justify-center items-center w-full overflow-hidden min-h-screen  ">
-     <div
-  className="absolute inset-0 bg-no-repeat bg-center bg-cover "
-  style={{
-    opacity:0.5,
-    backgroundImage: `url(https://img.freepik.com/free-vector/background-line-abstract-gradient-colorful-style_483537-2549.jpg?t=st=1744891149~exp=1744894749~hmac=c7c3ea98d1d1db5fdd4c1273346478f7df4d86d05bcbf93b219eeb3240d8acc1&w=1060)`,
-  }}
-/>
-
-      <Shapes />
-
-      {/* Left Triangle */}
-      <div className="hidden md:block absolute inset-0 z-10">
-        <div
-          className="absolute left-0 top-1/2 -translate-y-1/2 w-0 h-0"
-          style={{
-            borderTop: "30vh solid transparent",
-            borderBottom: "30vh solid transparent",
-            borderLeft: "20vw solid #2b318a",
-          }}
-        />
-      </div>
-
-      {/* Right Triangle */}
-      <div className="hidden md:block absolute inset-0 z-10">
-        <div
-          className="absolute right-0 top-1/2 -translate-y-1/2 w-0 h-0"
-          style={{
-            borderTop: "30vh solid transparent",
-            borderBottom: "30vh solid transparent",
-            borderRight: "20vw solid #2b318a",
-          }}
-        />
-      </div>
-
-      <div className="absolute inset-0 z-10">
-        {/* Top-center triangle (only on small screens) */}
-        <div
-          className={`
-      absolute 
-      bottom-0 left-1/2 
-      -translate-x-1/2 
-      md:hidden 
-      w-0 h-0
-    `}
-          style={{
-            borderLeft: "30vh solid transparent",
-            borderRight: "30vh solid transparent",
-            borderBottom: "20vh solid #2b318a",
-          }}
-        />
-      </div>
-
-      <div className="absolute inset-0 z-10">
-        <div
-          className={`
-      absolute 
-      top-0 left-1/2 
-      -translate-x-1/2 
-      md:hidden 
-      w-0 h-0
-    `}
-          style={{
-            borderLeft: "30vh solid transparent",
-            borderRight: "30vh solid transparent",
-            borderTop: "20vh solid #2b318a",
-          }}
-        />
-      </div>
-
-      {/* Carousel */}
-      <Carousel className="w-full h-full relative ">
-        <CarouselContent className="">
-          {images.map((img, index) => (
-            <CarouselItem
-              key={index}
-              className="flex items-center justify-center h-full"
-            >
-              <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, ease: "easeOut" }}
-                className="w-96  md:w-[600px] lg:w-[700px] h-auto px-4 relative"
-              >
-                <div className="absolute inset-0 bg-white/20 backdrop-blur-lg border border-gray-200 shadow-base rounded-3xl z-[-1]" />
-
-                <Image
-                  src={img}
-                  alt={`Slide ${index + 1}`}
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  className="w-full h-auto object-contain "
-                  priority
-                />
-              </motion.div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-
-        {/* Navigation buttons */}
-        <CarouselPrevious className=" absolute top-0 md:top-1/2 left-1/5 -translate-y-1/2 z-20 bg-white text-black p-2 rounded-full shadow-md transition hover:shadow-custom" />
-        <CarouselNext className="absolute top-0 md:top-1/2 right-1/5 -translate-y-1/2 z-20 bg-white text-black p-2 rounded-full shadow-md transition hover:shadow-custom" />
-      </Carousel>
+    <div
+      onClick={onClick}
+      className="absolute bottom-4 right-10 md:right-6 lg:right-12 z-20 p-2 bg-white rounded-full shadow-custom cursor-pointer
+                 md:top-1/2 md:translate-y-[-50%] md:bottom-auto md:left-auto"
+    >
+      <ChevronRight className="text-black w-5 h-5 md:w-6 md:h-6" />
     </div>
   );
-}
+};
+
+const CustomPrevArrow: FC<ArrowProps> = ({ onClick }) => {
+  return (
+    <div
+      onClick={onClick}
+      className="absolute bottom-4 left-10 md:left-6 lg:left-12 z-20 p-2 bg-white rounded-full shadow-custom cursor-pointer
+                 md:top-1/2 md:translate-y-[-50%] md:bottom-auto md:right-auto"
+    >
+      <ChevronLeft className="text-black w-5 h-5 md:w-6 md:h-6" />
+    </div>
+  );
+};
+
+const HeroCarousel: React.FC = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 800,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+  return (
+    <section className="relative bg-gradient-to-br from-white via-[#fdfdfd] to-red-100 min-h-screen flex items-center justify-center py-16">
+      <div className="relative z-10 max-w-7xl w-full px-4">
+        <Slider {...settings}>
+          {images.map((src, index) => (
+            <div key={index} className="px-4">
+              <div
+                className="bg-white rounded-3xl shadow-xl overflow-hidden transition-transform 
+              hover:scale-[1.015] duration-500 ease-in-out"
+              >
+                <Image
+                  src={src}
+                  alt={`Slide ${index + 1}`}
+                  width={700}
+                  height={400}
+                  className="object-fit md:object-cover w-full h-[320px] md:h-[400px] lg:h-[450px]"
+                />
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </section>
+  );
+};
+
+export default HeroCarousel;

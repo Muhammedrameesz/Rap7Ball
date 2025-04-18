@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
+import SGroundImage from "@/images/baseball-player-cartoon-character-transparent-background.png";
 
 const VideoSection = () => {
   return (
@@ -9,10 +11,21 @@ const VideoSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-center px-4 sm:px-6 lg:px-8">
           {/* Text Section */}
           <div className="lg:col-span-1 relative">
-            <h2 className="text-center lg:text-left text-gray-800 text-xl sm:text-3xl md:text-4xl lg:text-5xl font-medium ">
-              This video explains what RaP7 Ball is all about
+            
+            <h2 className="text-center lg:text-left text-gray-800 text-2xl sm:text-4xl lg:text-5xl font-medium ">
+              This video explains what   <span className="text-customBlue">RaP7 Ball</span> is all about
             </h2>
-            <div className="hidden md:block absolute -bottom-2 left-0 h-1 w-[70%] bg-customBlue" />
+            <div className="w-full max-w-md mx-auto lg:mx-0">
+              <Image
+                src={SGroundImage}
+                alt="Image"
+                width={600}
+                height={400}
+                className="object-contain w-full h-auto rounded-xl "
+                priority
+              />
+            </div>
+           
           </div>
 
           {/* Video Section */}
