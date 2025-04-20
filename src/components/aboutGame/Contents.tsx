@@ -14,7 +14,7 @@ export default function Contents() {
 
   return (
     <div
-      className="relative bg-cover bg-center bg-no-repeate py-14 px-6 md:px-10 flex justify-center items-center text-gray-900"
+      className="relative bg-cover bg-center bg-no-repeate  py-14 px-6 md:px-10 flex justify-center items-center text-gray-900"
       style={{
         backgroundImage: `url(https://img.freepik.com/premium-photo/gradient-digital-navy-abstract-creative-background-design_851755-316011.jpg?w=996)`,
       }}
