@@ -39,7 +39,7 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 max-w-7xl mx-auto px-6">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="bg-white p-8 md:p-10   flex flex-col gap-4"
+          className="bg-white p-8 md:p-10   flex flex-col gap-4 rounded-md"
         >
           <div className="flex flex-col gap-2 mb-2">
             <h2 className="text-3xl font-semibold">Need Any Help?</h2>
@@ -56,7 +56,7 @@ export default function ContactForm() {
                 type="text"
                 {...register("firstName")}
                 placeholder="First Name"
-                className="input input-bordered border-2 border-gray-400 focus:border-customBlue focus:outline-none w-full p-2"
+                className="input input-bordered rounded-sm border border-gray-400 focus:border-customBlue focus:outline-none w-full p-2"
               />
               <span className="text-red-500 text-sm">
                 {errors.firstName?.message}
@@ -69,7 +69,7 @@ export default function ContactForm() {
                 type="text"
                 {...register("lastName")}
                 placeholder="Last Name"
-                className="input input-bordered border-2 border-gray-400 focus:border-customBlue focus:outline-none w-full p-2 "
+                className="input input-bordered rounded-sm border border-gray-400 focus:border-customBlue focus:outline-none w-full p-2 "
               />
               <span className="text-red-500 text-sm">
                 {errors.lastName?.message}
@@ -84,7 +84,7 @@ export default function ContactForm() {
                 type="email"
                 {...register("email")}
                 placeholder="Your Email"
-                className="input input-bordered border-2 border-gray-400  focus:border-customBlue focus:outline-none w-full  p-2 "
+                className="input input-bordered rounded-sm border border-gray-400  focus:border-customBlue focus:outline-none w-full  p-2 "
               />
               <span className="text-red-500 text-sm">
                 {errors.email?.message}
@@ -97,7 +97,7 @@ export default function ContactForm() {
                 type="text"
                 {...register("phone")}
                 placeholder="Your Phone"
-                className="input input-bordered border-2 border-gray-400 w-full  p-2 
+                className="input input-bordered rounded-sm border border-gray-400 w-full  p-2 
                     focus:border-customBlue focus:outline-none"
               />
               <span className="text-red-500 text-sm">
@@ -111,7 +111,7 @@ export default function ContactForm() {
             <textarea
               {...register("message")}
               placeholder="Your Message"
-              className="textarea textarea-bordered h-28 border-2 border-gray-400 w-full p-2 
+              className="textarea rounded-sm textarea-bordered h-28 border border-gray-400 w-full p-2 
                              focus:border-customBlue focus:outline-none"
             />
             <span className="text-red-500 text-sm">
