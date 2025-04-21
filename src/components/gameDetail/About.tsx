@@ -22,6 +22,7 @@ const contents: ContentType[] = [
       "RaP7 Ball is a hybrid of Baseball and Cricket, blending rules and safety gear from both iconic sports.",
     icon: <MdSportsCricket size={20} />,
   },
+  
 ];
 
 export default function AboutTwo() {

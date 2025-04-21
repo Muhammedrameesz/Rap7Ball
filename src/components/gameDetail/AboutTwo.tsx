@@ -3,7 +3,7 @@
 import ImageTwo from "@/images/RaP7 Step by Step Procedure_page-0005.jpg";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { MdOutlineSportsBaseball } from "react-icons/md";
+import { MdOutlineAssistantDirection, MdOutlineSportsBaseball } from "react-icons/md";
 import { FaDrawPolygon } from "react-icons/fa";
 import { FaGripLinesVertical } from "react-icons/fa";
 
@@ -27,6 +27,11 @@ const contents: ContentType[] = [
       "A cricket pitch is included in the infield, running from one base of the equilateral triangle to its vertex.",
     icon: <FaGripLinesVertical size={20} />,
   },
+   {
+      title:
+        "To avoid baseball’s controversial balls and strikes calls, in RaP7 ball game, a pylon is used at home base, for the pitcher to use as a target to throw at.",
+      icon: <MdOutlineAssistantDirection size={20} />,
+    },
 ];
 
 export default function AboutTwo() {
@@ -46,11 +51,11 @@ export default function AboutTwo() {
         >
          
 
-          <div className="space-y-6">
+          <div className="space-y-5 ">
             {contents.map((item, i) => (
               <div
                 key={i}
-                className="flex items-start gap-4 p-4 bg-gray-50 font-medium rounded-xl border border-gray-200 shadow-sm"
+                className="flex items-start gap-4 p-4 bg-gray-100 font-medium rounded-xl "
               >
                 <div
                   className={`text-white p-2 rounded-full shadow ${

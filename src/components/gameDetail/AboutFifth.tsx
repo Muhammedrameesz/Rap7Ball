@@ -3,9 +3,9 @@
 import ImageTwo from "@/images/RaP7 Step by Step Procedure_page-0011.jpg";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import {GiStopwatch } from "react-icons/gi";
-import { MdLoop } from "react-icons/md";
-import { FaBaseballBall, FaUserEdit } from "react-icons/fa";
+import { GiStopwatch } from "react-icons/gi";
+import { FaBaseballBall, FaRunning } from "react-icons/fa";
+import { FaRegHandshake } from "react-icons/fa6";
 
 interface ContentType {
   title: string;
@@ -14,36 +14,41 @@ interface ContentType {
 
 const contents: ContentType[] = [
   {
-    title: "It is called an “over” after the pitcher pitches the ball 7 times to the batsman at the home base.",
+    title: "One pitcher is allowed three alternative overs in an inning.",
+    icon: <GiStopwatch size={20} />,
+  },
+
+  {
+    title: "A pitcher could pitch the ball like in baseball or in cricket.",
     icon: <FaBaseballBall size={20} />,
   },
   {
-    title: "After the end of an over, a new pitcher would start pitching the next over.",
-    icon: <FaUserEdit size={20} />,
+    title:
+      "Its called an 'over' after the pitcher pitches the ball 7 times to the batsman at the home base.",
+    icon: <FaRunning size={20} />,
   },
   {
-    title: "For maintaining 7 defensive players on the field, this pitcher could be one from the bench or one of the fielders.",
-    icon: <MdLoop size={20} />,
-  },
-  {
-    title: "One pitcher is allowed three alternative overs in an inning.",
-    icon: <GiStopwatch size={20} />,
+    title:
+      "Before starting the over, the pitcher should inform the umpire and batsman about their pitching style. Once started, they must maintain that style for the entire over.",
+    icon: <FaRegHandshake size={20} />,
   },
 ];
 
 export default function AboutFifth() {
   return (
-    <div className="px-4 md:px-16 py-16 bg-gray-50 overflow-x-hidden">
+    <div className="px-4 md:px-16 py-16 bg-gray-100 overflow-x-hidden">
       <main className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 max-w-7xl mx-auto">
         {/* Image Section */}
         <motion.section
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 2,
-              ease: [0.25, 1, 0.5, 1]
-            }}
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 2,
+            ease: [0.25, 1, 0.5, 1],
+            
+          }}
+          className=""
         >
           <div className="relative w-full h-64 md:h-[450px] rounded-2xl overflow-hidden shadow-xl">
             <Image
@@ -58,21 +63,20 @@ export default function AboutFifth() {
 
         {/* Content Section */}
         <motion.section
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 2,
-              ease: [0.25, 1, 0.5, 1]
-            }}
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 2,
+            ease: [0.25, 1, 0.5, 1],
+          }}
           className="space-y-8"
         >
-          
-          <div className="space-y-6">
+          <div className="space-y-5">
             {contents.map((item, i) => (
               <div
                 key={i}
-                className="flex items-start gap-4 p-4 bg-white font-medium rounded-xl border border-gray-200 shadow-sm"
+                className="flex items-start gap-4 p-4 bg-white font-medium rounded-xl "
               >
                 <div
                   className={`text-white p-2 rounded-full shadow ${
@@ -80,7 +84,7 @@ export default function AboutFifth() {
                       ? "bg-green-500"
                       : i === 2
                       ? "bg-red-500"
-                      :i===3
+                      : i === 3
                       ? "bg-yellow-500"
                       : "bg-purple-700"
                   }`}

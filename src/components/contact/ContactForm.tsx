@@ -39,7 +39,7 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 max-w-7xl mx-auto px-6">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="bg-white p-8 md:p-10  shadow-md flex flex-col gap-4"
+          className="bg-white p-8 md:p-10   flex flex-col gap-4"
         >
           <div className="flex flex-col gap-2 mb-2">
             <h2 className="text-3xl font-semibold">Need Any Help?</h2>

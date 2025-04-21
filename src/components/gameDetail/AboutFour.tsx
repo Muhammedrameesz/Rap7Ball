@@ -3,7 +3,8 @@
 import ImageTwo from "@/images/RaP7 Step by Step Procedure_page-0009.jpg";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FaUserFriends, FaExchangeAlt, FaDice } from "react-icons/fa";
+import { FaBaseballBall, FaExchangeAlt, FaUserEdit } from "react-icons/fa";
+import { MdLoop } from "react-icons/md";
 
 interface ContentType {
   title: string;
@@ -12,18 +13,24 @@ interface ContentType {
 
 const contents: ContentType[] = [
   {
-    title: "Each team consists of 10 players.",
-    icon: <FaUserFriends size={20} />,
-  },
-  {
-    title:
-      "A coin flip decides who bats first and who fields first. The team that bats first will have 7 players in the batting order and 3 subs on the bench. The team that fields first will have 7 outfielders and 3 players on the bench.",
-    icon: <FaDice size={20} />,
-  },
-  {
     title:
       "The 3 extra players can be for strategic substitution for batting, fielding, pitching and catching.",
     icon: <FaExchangeAlt size={20} />,
+  },
+  {
+    title:
+      "It is called an “over” after the pitcher pitches the ball 7 times to the batsman at the home base.",
+    icon: <FaBaseballBall size={20} />,
+  },
+  {
+    title:
+      "After the end of an over, a new pitcher would start pitching the next over.",
+    icon: <FaUserEdit size={20} />,
+  },
+  {
+    title:
+      "For maintaining 7 defensive players on the field, this pitcher could be one from the bench or one of the fielders.",
+    icon: <MdLoop size={20} />,
   },
 ];
 
@@ -33,23 +40,22 @@ export default function AboutFour() {
       <main className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 max-w-7xl mx-auto">
         {/* Content Section */}
         <motion.section
-           initial={{ opacity: 0, scale: 0 }}
-           whileInView={{ opacity: 1, scale: 1 }}
-           viewport={{ once: true }}
-           transition={{
-             duration: 2,
-             ease: [0.25, 1, 0.5, 1]
-           }}
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 2,
+            ease: [0.25, 1, 0.5, 1],
+          }}
           className="order-2 md:order-1 space-y-8"
         >
-         
-          <div className="space-y-6">
+          <div className="space-y-5">
             {contents.map((item, i) => (
               <div
                 key={i}
-                className="flex items-start gap-4 p-4 bg-gray-50 font-medium rounded-xl border border-gray-200 shadow-sm"
+                className="flex items-start gap-4 p-4 bg-gray-100 font-medium rounded-xl "
               >
-                 <div
+                <div
                   className={`text-white p-2 rounded-full shadow ${
                     i === 1
                       ? "bg-green-500"
@@ -70,13 +76,13 @@ export default function AboutFour() {
 
         {/* Image Section */}
         <motion.section
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 2,
-              ease: [0.25, 1, 0.5, 1]
-            }}
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 2,
+            ease: [0.25, 1, 0.5, 1],
+          }}
           className="order-1 md:order-2 relative w-full h-64 sm:h-80 md:h-[450px] rounded-2xl overflow-hidden shadow-xl"
         >
           <Image
