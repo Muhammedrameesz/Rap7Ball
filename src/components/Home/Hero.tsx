@@ -75,12 +75,33 @@ const HeroCarousel: React.FC = () => {
 
   return (
     <section className="relative bg-gradient-to-br from-pink-50 via-[#fdfdfd] to-red-100 min-h-screen flex items-center justify-center py-16">
+      <div
+        className="absolute left-1/2 -translate-x-1/2 bottom-0 z-10"
+        style={{
+          width: 0,
+          height: 0,
+          borderLeft: "190px solid transparent",
+          borderRight: "190px solid transparent",
+          borderBottom: "300px solid #fff",
+        }}
+      />
+      <div
+        className="absolute left-1/2 -translate-x-1/2 top-0 z-10"
+        style={{
+          width: 0,
+          height: 0,
+          borderLeft: "190px solid transparent",
+          borderRight: "190px solid transparent",
+          borderTop: "300px solid #fff",
+        }}
+      />
+
       <div className="relative z-10 max-w-7xl w-full px-4">
         <Slider {...settings}>
           {images.map((src, index) => (
             <div key={index} className="px-4">
               <div
-                className="bg-white rounded-3xl shadow-xl overflow-hidden transition-transform 
+                className="bg-white rounded-3xl shadow-base overflow-hidden transition-transform 
               hover:scale-[1.015] duration-500 ease-in-out"
               >
                 <Image
