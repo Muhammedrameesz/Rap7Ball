@@ -27,15 +27,15 @@ export default function Contents() {
         viewport={{ once: true }}
         className="relative z-10 max-w-4xl w-full rounded-3xl  p-8 md:p-12 text-center space-y-10 mx-auto"
       >
-        {/* Heading */}
+        
         <h2 className="relative text-3xl md:text-4xl font-bold tracking-tight text-white w-fit mx-auto mb-10 md:mb-16">
           What is RaP7 Ball?
           <div className="absolute right-0 -bottom-1 bg-gray-500 h-[2px] w-[50%]" />
         </h2>
 
-        {/* Cards */}
+     
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-          {/* Baseball Card */}
+        
           <motion.div
             className="relative flex flex-col items-center gap-4 p-5 bg-white rounded-xl shadow-md 
               hover:shadow-lg hover:bg-transparent hover:text-white border transition-all duration-500 group"
@@ -68,7 +68,7 @@ export default function Contents() {
           </motion.div>
         </div>
 
-        {/* Button */}
+  
         <motion.div className="pt-5 mx-auto w-fit">
           <button
             onClick={handleClick}

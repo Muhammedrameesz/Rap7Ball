@@ -40,7 +40,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     src: image3,
-    title: "7 Overs. Non-Stop Action.",
+    title: "7 Overs. 2 Innings.",
     icon: <TimerReset className={`${iconClass}`} />,
   },
   {

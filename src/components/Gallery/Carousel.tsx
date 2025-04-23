@@ -14,7 +14,7 @@ import imae3 from "@/images/GalleryImages/76088ea9-27ff-4c05-8e83-1ee6edcb1b4f-3
 import imae4 from "@/images/GalleryImages/76088ea9-27ff-4c05-8e83-1ee6edcb1b4f-38.jpg";
 import imae5 from "@/images/GalleryImages/76088ea9-27ff-4c05-8e83-1ee6edcb1b4f-39.jpg";
 import imae6 from "@/images/GalleryImages/76088ea9-27ff-4c05-8e83-1ee6edcb1b4f-40.jpg";
-import SGroundImage from "@/images/baseball-player-cartoon-character-transparent-background.png";
+import SGroundImage from "@/images/GalleryImages/morph-man-throwing-flaming-americal-football.png";
 
 const images = [imae1, imae2, imae3, imae4, imae5, imae6];
 
@@ -77,6 +77,16 @@ const GalleryCarousel = () => {
 
   return (
     <section className="relative w-full overflow-x-hidden bg-black text-white py-16 md:py-28 px-4 md:px-8">
+      <div className="text-center mb-5">
+        <h2 className="text-gray-100 text-2xl sm:text-4xl lg:text-5xl font-medium leading-snug mb-4">
+          Meet the team behind{" "}
+          <span className="text-customBlue">RaP7 Ball</span>
+        </h2>
+        <p className="text-gray-400 text-base sm:text-lg">
+          Their passion and dedication fuel the energy and vision of this
+          revolutionary sport.
+        </p>
+      </div>
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 items-center">
         {/* Left side - Carousel */}
         <motion.div
@@ -93,7 +103,7 @@ const GalleryCarousel = () => {
                   <Image
                     src={img}
                     alt={`Gallery Image ${index + 1}`}
-                    className="w-full h-[300px] md:h-[380px] lg:h-[420px] object-cover"
+                    className="w-full h-[300px] md:h-[380px] lg:h-[420px] object-contain"
                     placeholder="blur"
                   />
                 </div>
@@ -110,14 +120,6 @@ const GalleryCarousel = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <h2 className="text-gray-100 text-2xl sm:text-4xl lg:text-5xl font-medium leading-snug mb-4">
-            Meet the team behind{" "}
-            <span className="text-customBlue">RaP7 Ball</span>
-          </h2>
-          <p className="text-gray-400 text-base sm:text-lg">
-            Their passion and dedication fuel the energy and vision of this
-            revolutionary sport.
-          </p>
           <div className="w-full max-w-md mx-auto lg:mx-0">
             <Image
               src={SGroundImage}
@@ -128,6 +130,7 @@ const GalleryCarousel = () => {
               priority
             />
           </div>
+
           {/* <div className="hidden md:block mt-4 h-1 w-1/2 bg-customBlue rounded-lg" /> */}
         </motion.div>
       </div>

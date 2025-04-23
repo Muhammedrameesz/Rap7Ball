@@ -53,8 +53,8 @@ export default function AboutUs() {
             height={200}
             className="rounded-xl mb-4 object-cover w-full h-40"
           />
-          <h2 className="text-xl font-bold text-red-500 mb-2 group-hover:text-gray-100 transition-all duration-500">Our Roots</h2>
-          <p className="text-gray-600 group-hover:text-white transition-all duration-500">
+          <h2 className={`text-xl font-bold  mb-2  ${active==="1" ?"text-gray-100":"text-red-500"} transition-all duration-500`}>Our Roots</h2>
+          <p className={` ${active==="1" ?"text-white":"text-gray-600 "}  transition-all duration-500`}>
             RaP7 Ball was born from the inventive spirit of Rajan Paul—an
             engineer, sportsman, and hybrid thinker. With a deep passion for
             sports from Kerala to the U.S., and experience in Soccer, Cricket,
@@ -116,8 +116,8 @@ export default function AboutUs() {
             }
             transition={{ duration: 0.5, ease: "easeOut" }}
           />
-          <h2 className="text-xl font-bold text-red-500 mb-2 group-hover:text-gray-100 transition-all duration-500">Looking Ahead</h2>
-          <p className="text-gray-600 mb-4 group-hover:text-white transition-all duration-500">
+          <h2 className={`text-xl font-bold  mb-2  ${active==="3" ?"text-gray-100":"text-red-500"} transition-all duration-500`}>Looking Ahead</h2>
+          <p className={` ${active==="3" ? "text-white":"text-gray-600 "}  transition-all duration-500`}>
             At 75, Rajan is looking for a passionate, visionary partner to
             globalize RaP7 Ball. With rave reviews from Indian media and a
             successful launch in Palakkad, the journey has begun. RaP7 Ball
@@ -128,7 +128,7 @@ export default function AboutUs() {
             alt="Vision"
             width={400}
             height={200}
-            className="rounded-xl object-cover w-full h-40"
+            className="rounded-xl object-cover w-full h-40 mt-5 md:mt-7"
           />
         </motion.div>
       </div>

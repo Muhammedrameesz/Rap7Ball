@@ -13,6 +13,8 @@ import {
   TbHexagonNumber6,
 } from "react-icons/tb";
 
+import Founder from "@/images/Founder-rap7.jpeg"
+
 export default function Content() {
   const [active, setActive] = useState("");
   return (
@@ -21,7 +23,7 @@ export default function Content() {
         <div className="w-full max-w-md mx-auto">
           <Image
             alt="Image"
-            src="https://img.freepik.com/free-photo/medium-shot-man-working-as-real-estate-agent_23-2151064891.jpg?t=st=1744897463~exp=1744901063~hmac=34e9db20938eb7b57817f34296b759abfe8b4874a4dc83db6552895d8506d9ce&w=826"
+            src={Founder}
             width={826}
             height={620}
             className="rounded-xl object-cover shadow-md w-full h-auto"
@@ -288,7 +290,7 @@ export default function Content() {
           />
           <p
             className="absolute left-1/2 -bottom-14 transform -translate-x-1/2 bg-gray-900 text-gray-100 p-5 rounded-2xl 
-          text-base leading-relaxed shadow-lg max-w-sm w-[90%] sm:w-auto text-center"
+                        text-sm md:text-base leading-relaxed shadow-lg max-w-sm w-[90%] sm:w-auto text-center"
           >
             March 2023 – A few Kerala Club members and Michiganders participated
             in a friendly RaP7 Ball Game.
