@@ -40,7 +40,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     src: image3,
-    title: "7 Overs. 2 Innings.",
+    title: " 7 overs is one innings like that two innings",
     icon: <TimerReset className={`${iconClass}`} />,
   },
   {
